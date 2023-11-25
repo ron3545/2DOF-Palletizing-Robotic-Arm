@@ -5,31 +5,7 @@ https://github.com/ron3545/2DOF-Palletizing-Robotic-Arm/assets/86136180/2ca8c2c6
 
 ## Overview
 
-This Arduino program is designed for a 2 Degrees of Freedom (2DOF) robotic arm used in a palletizing system. The system incorporates two NEMA 17 stepper motors for arm movement and an IR sensor for box detection. The user can interact with the system using an IR remote control to specify the number of boxes to be placed on the left side of the robotic arm.
-
-## Components
-
-- **Stepper Motors:**
-  - Left Motor (MOTOR_LEFT_STEP, MOTOR_LEFT_DIR)
-  - Right Motor (MOTOR_RIGHT_STEP, MOTOR_RIGHT_DIR)
-
-- **IR Sensor:**
-  - Pin: IR_SENSOR_PIN
-
-- **IR Remote:**
-  - Buttons:
-    - Left: BUTTON_LEFT
-    - Right: BUTTON_RIGHT
-    - Up: BUTTON_UP
-    - Down: BUTTON_DOWN
-
-## Libraries Used
-
-- **AccelStepper:**
-  - Used for smooth acceleration and deceleration of stepper motors.
-
-- **IRremote:**
-  - Used for interfacing with the IR remote control.
+The goal of this project is to create a robotic system capable of precise control and movement. The system consists of multiple joints, each driven by individual motors, and it incorporates sensor feedback to achieve accurate positioning. The project aims to demonstrate the integration of various technologies to build a functional robotic arm.
 
 ## Setup
 
@@ -89,6 +65,19 @@ This Arduino program is designed for a 2 Degrees of Freedom (2DOF) robotic arm u
 - Modify `calculateStepsForMovement()` to suit the required movement for your robotic arm.
 - Implement palletizing logic in the `palletize()` function based on your project requirements.
 
+## Challenges Faced During the Build
+- Motor Control and Positioning - Implementing accurate motor control and positioning is a significant challenge. This involves integrating encoders and sensors to ensure precise movement and alignment of each joint.
+- Sensor Intigration - Implementing accurate motor control and positioning is a significant challenge. This involves integrating encoders and sensors to ensure precise movement and alignment of each joint.
+- PS2 Controller Interface - mplementing a robust interface with a PS2 controller involves managing joystick and button inputs, translating them into meaningful commands, and ensuring real-time responsiveness.
+- Technology Integration - Bringing together various technologies, including magnetic encoders, motor control algorithms, sensor feedback, and PS2 controller communication, requires careful integration and coordination.
+
+## Technologies Behind It
+- Magnetic Encoders - Magnetic encoders, such as the AS5600, are used for precise angle measurement. They provide feedback to control the position and movement of each joint.
+- Motor Control - Motor control involves using PID algorithms and custom motor control logic to accurately position and move the motors. Stepper and normal motors are employed based on specific requirements.
+- PS2 Controller Interface - The project utilizes a PlayStation 2 (PS2) controller for user input. The PS2 library facilitates the communication and interpretation of joystick and button signals.
+- Arduino Platform - The Arduino platform is the core of the project, providing an environment for coding, sensor integration, and motor control. The code is written in C++ using the Arduino IDE.
+- Wiring and Electronics - The project involves wiring and electronics to connect and interface sensors, motors, and controllers. Careful circuit design and wiring are essential for reliable operation.
+  
 ## Notes
 
 - This is a basic template; customize it based on your specific robotic arm design and requirements.
